@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+
+{% block body %}
+<a id="back2Top" title="Back to top" href="#">&#10148;</a>
+	<div class="container my-5">
+
+			<h2 class="text-center ml-5" id="ml1">مـأكـولات شـرقيـة CUISINE LEVANTINE</h2>
+			
+
+
+		<div class="row d-flex justify-content-between" >
+			{% for produit in produits %}
+			
+				<div class="col col-md-6 col-lg-4 my-3 " data-aos="fade-up" data-aos-duration="2000">
+					<div class="card" style="width: 20rem;">
+						
+						<div class="cont">
+							<a href="{{ path ("produit_show", {'id':produit.id}) }}" class="btn btn-info btn-sm">
+								<img src="/images/{{produit.image}}" class="card-img-top image" >
+							</a>
+							<div class="overlay">
+								<p>
+									<strong>{{produit.name}}</strong>
+								</p>
+								{{produit.description}}
+							</div>
+						</div>
+							
+
+						<div class="card-body">
+							<h5 class="card-title">{{produit.name}}</h5>
+							<div class="row mb-1">
+								<div class="col">
+									<p class="card-text">السعر: {{produit.price}} &euro;</p>
+								</div>
+								<div class="col">
+									<p class="card-text">الوحدة: {{produit.unit}}</p>
+								</div>
+							</div>
+							<a href="{{ path ("produit_show", {'id':produit.id}) }}" class="btn btn-info btn-sm">المزيد...</a>
+							<a href="{{ path ("produit_edit", {'id':produit.id}) }}" class="btn btn-info btn-sm">تعديل</a>
+							
+							
+						</div>
+						
+					</div>
+				</div>
+				
+			{% endfor %}
+		</div>
+	</div>
+
+{% endblock %}
+
+

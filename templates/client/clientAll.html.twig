@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}All clients{% endblock %}
+
+
+{% block body %}
+<a id="back2Top" title="Back to top" href="#">&#10148;</a>
+	<div class="container my-5">
+
+			<h2 class="text-center ml-5" id="ml6">قائمة بالزبائن</h2>
+
+
+
+		
+			{% for client in clients %}
+				<div class="row mb-1" >
+			
+					<div class="col-4 p-3" data-aos="fade-up" data-aos-duration="2000">
+                        {{client.nom}} {{client.prenom}}
+                    </div>
+                    <div class="col-2 p-3" data-aos="fade-up" data-aos-duration="2000">
+                        {{client.tel}}
+                    </div>
+
+                    <div class="col-6 text-left p-3" data-aos="fade-up" data-aos-duration="2000">
+                        {{client.adresse}}
+                    </div>
+
+                </div>
+                <div class="row mb-2">
+
+                    <div class="col " >
+                        <a class="btn btn-success btn-sm" href="" data-aos="fade-right" data-aos-duration="2000">تعديل</a>
+                        <a class="btn btn-danger btn-sm" href="" data-aos="fade-left" data-aos-duration="2000">حذف</a>
+                    </div>
+                </div>
+                <hr>
+
+				
+			{% endfor %}
+		</div>
+	</div>
+
+{% endblock %}

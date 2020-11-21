@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}new produit{% endblock %}
+
+{% block body %}
+	<div class="container my-5">
+
+        
+		<h2 class="text-center ml-5" id="ml3">إضافة طبق جديد</h2>
+		
+    
+		{{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button class='btn btn-success'>Enregistrer</button>
+        {{ form_end(form) }}
+	</div>
+{% endblock %}

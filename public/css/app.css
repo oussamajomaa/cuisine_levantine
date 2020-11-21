@@ -1,0 +1,107 @@
+@import url(http://fonts.googleapis.com/earlyaccess/amiri.css);
+/* font-family: Amiri, serif; */
+
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+/* font-family: Droid Arabic Kufi, serif; */
+
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+/* font-family: Droid Arabic Naskh, serif; */
+
+@import url(http://fonts.googleapis.com/earlyaccess/lateef.css);
+/* font-family: Scheherazade, serif; */
+
+@import url(http://fonts.googleapis.com/earlyaccess/scheherazade.css);
+/* font-family: Lateef, serif; */
+
+@import url(http://fonts.googleapis.com/earlyaccess/thabit.css);
+/* font-family: Thabit, serif; */
+
+
+body{
+    padding: 0;
+    margin: 0;
+    direction: rtl;
+    text-align: right;
+    font-family: Droid Arabic Kufi, serif;
+    position: relative;
+}
+
+#ml1,#ml2,#ml3,#ml4,#ml5 {
+    position: relative;
+    font-weight: 900;
+    font-size: 2.3em;
+}
+
+ 
+.ml7 {
+    position: absolute;
+    left: 100px;
+    top: -5px;
+    font-weight: 900;
+    font-size: 3.7em;
+    direction: ltr;
+  }
+
+  .image-log{
+        position:absolute;
+        left: 30px;
+        top: 2px;
+  }
+  
+  .ml7 .letter {
+    transform-origin: 0 100%;
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  #back2Top {
+    width: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+    transform: rotate(270deg);
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: #DDD;
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+#back2Top:hover {
+    background-color: #DDF;
+    color: #000;
+}
+
+.cont {
+    position: relative;
+    width: 100%;
+  }
+  
+
+  
+  .overlay {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #d9534f;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    transform: scale(0);
+    text-align: justify;
+    transition: .900s ease;
+  }
+  
+  .cont:hover .overlay {
+    transform: scale(1);
+  }
+
+ 

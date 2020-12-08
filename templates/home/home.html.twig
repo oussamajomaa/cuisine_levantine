@@ -17,16 +17,18 @@
 				<div class="col col-md-6 col-lg-4 my-3 " data-aos="fade-up" data-aos-duration="2000">
 					<div class="card" style="width: 20rem;">
 						
-						<div class="cont">
-							<a href="{{ path ("produit_show", {'id':produit.id}) }}" class="btn btn-info btn-sm">
+						<div class="cont" >
+							<a href="{{ path ("produit_show", {'id':produit.id}) }}" class="btn btn-info btn-sm" style="background-color:transparent; border-color:transparent">
 								<img src="/images/{{produit.image}}" class="card-img-top image" >
-							</a>
-							<div class="overlay">
+							<div class="overlay" >
 								<p>
 									<strong>{{produit.name}}</strong>
 								</p>
-								{{produit.description}}
+								<p class="text-light">
+									{{produit.description}}
+								</p>
 							</div>
+							</a>
 						</div>
 							
 
